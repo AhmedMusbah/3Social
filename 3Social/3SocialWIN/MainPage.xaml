@@ -1,0 +1,32 @@
+﻿<Page x:Name="page"
+    x:Class="_3SocialWIN.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_3SocialWIN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:Name="btnFacebook" HorizontalAlignment="Stretch" Icon="People" Label="Facebook" VerticalAlignment="Stretch" d:LayoutOverrides="Height" Click="btnFacebook_Click"/>
+            <AppBarButton x:Name="btnTwitter" HorizontalAlignment="Stretch" Icon="Account" Label="Twitter" VerticalAlignment="Stretch" d:LayoutOverrides="Height" Click="btnTwitter_Click"/>
+            <AppBarButton x:Name="btnInstagram" HorizontalAlignment="Stretch" Icon="Camera" Label="Instagram" VerticalAlignment="Stretch" d:LayoutOverrides="Height" Click="btnInstagram_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:Name="AppGrid" Width="{Binding ActualWidth, ElementName=page, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=page, Mode=OneWay}">
+        <StackPanel x:Name="stkFacebook" Height="{Binding ActualHeight, ElementName=page, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=page, Mode=OneWay}">
+            <WebView x:Name="webFacebook" Height="{Binding ActualHeight, ElementName=page, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=page, Mode=OneWay}" Visibility="{Binding Visibility, ElementName=stkFacebook}" ScrollViewer.VerticalScrollBarVisibility="Disabled" />
+        </StackPanel>
+        <StackPanel x:Name="stkTwitter" Height="{Binding ActualHeight, ElementName=page, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=page, Mode=OneWay}">
+            <WebView x:Name="webTwitter" Height="{Binding ActualHeight, ElementName=page, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=page, Mode=OneWay}" Visibility="{Binding Visibility, ElementName=stkTwitter}" HorizontalAlignment="Center" VerticalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" />
+        </StackPanel>
+        <StackPanel x:Name="stkInstagram" Height="{Binding ActualHeight, ElementName=page, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=page, Mode=OneWay}">
+            <WebView x:Name="webInstagram" Height="{Binding ActualHeight, ElementName=page, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=page, Mode=OneWay}" Visibility="{Binding Visibility, ElementName=stkInstagram}" ScrollViewer.VerticalScrollBarVisibility="Disabled" />
+        </StackPanel>
+
+    </Grid>
+</Page>

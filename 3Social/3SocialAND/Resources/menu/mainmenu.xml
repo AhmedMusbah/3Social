@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/mainMenu">
+  <item android:id="@+id/btnFacebook"
+        android:icon="@drawable/facebook"
+        android:showAsAction="always"
+        android:orderInCategory="100">
+  </item>
+  <item android:id="@+id/btnTwitter"
+        android:icon="@drawable/twitter"
+        android:showAsAction="always"
+        android:orderInCategory="200">
+  </item>
+  <item android:id="@+id/btnInstagram"
+        android:icon="@drawable/instagram"
+        android:showAsAction="always"
+        android:orderInCategory="300">
+  </item>
+</menu>
